@@ -1,0 +1,275 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3828), pid=18444, tid=2384
+#
+# JRE version:  (21.0.5+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.5+8-b631.30, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: abort vfprintf -XX:ErrorFile=C:\Users\raver\java_error_in_webstorm_%p.log -XX:HeapDumpPath=C:\Users\raver\java_error_in_webstorm.hprof -Xms128m -Xmx2048m -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:CICompilerCount=2 -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Djdk.nio.maxCachedBufferSize=2097152 -Djava.util.zip.use.nio.for.zip.file.access=true -Dkotlinx.coroutines.debug=off -XX:+UnlockDiagnosticVMOptions -XX:TieredOldPercentage=100000 -Denable.non.commercial.ai.license=true -Dwsl.use.remote.agent.for.nio.filesystem=true -Djava.nio.file.spi.DefaultFileSystemProvider=com.intellij.platform.core.nio.fs.MultiRoutingFileSystemProvider -Djava.security.manager=com.intellij.platform.core.nio.fs.CoreBootstrapSecurityManager -Xms256m -Xmx2048m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED -javaagent:C:\jetbra\jetbra-agent.jar -Djb.vmOptionsFile=C:\jetbra\vmoptions\webide.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=WebStorm2024.3 -Djna.boot.library.path=C:\Program Files\JetBrains\WebStorm 2024.3.2/lib/jna/amd64 -Dpty4j.preferred.native.folder=C:\Program Files\JetBrains\WebStorm 2024.3.2/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=C:\Program Files\JetBrains\WebStorm 2024.3.2/modules/module-descriptors.jar -Didea.platform.prefix=WebStorm -Dsplash=true -Daether.connector.resumeDownloads=false -Dcompose.swing.render.on.graphics=true --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED -Dide.native.launcher=true -Djcef.sandbox.ptr=0000024F847B2A70 -Djcef.sandbox.cefVersion=122.1.9+gd14e051+chromium-122.0.6261.94 com.intellij.idea.Main --line 6 C:\Users\raver\Desktop\j\j\src\sections\get-pets.tsx
+
+Host: 12th Gen Intel(R) Core(TM) i5-12450H, 12 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+Time: Tue Dec  9 13:48:31 2025 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.5915) elapsed time: 0.008173 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000024f86c5a720):  JavaThread "Unknown thread" [_thread_in_vm, id=2384, stack(0x000000e57ed00000,0x000000e57f500000) (8192K)]
+
+Stack: [0x000000e57ed00000,0x000000e57f500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6e52b9]
+V  [jvm.dll+0x8c3633]
+V  [jvm.dll+0x8c5b8e]
+V  [jvm.dll+0x8c6273]
+V  [jvm.dll+0x288f46]
+V  [jvm.dll+0x6e1a35]
+V  [jvm.dll+0x6d5e3a]
+V  [jvm.dll+0x3634bb]
+V  [jvm.dll+0x36b086]
+V  [jvm.dll+0x3bd346]
+V  [jvm.dll+0x3bd618]
+V  [jvm.dll+0x335c2c]
+V  [jvm.dll+0x33691b]
+V  [jvm.dll+0x88aa89]
+V  [jvm.dll+0x3ca518]
+V  [jvm.dll+0x873b98]
+V  [jvm.dll+0x45eede]
+V  [jvm.dll+0x460bc1]
+C  [webstorm64.exe+0x3c06d]
+C  [webstorm64.exe+0x455b3]
+C  [webstorm64.exe+0x2a8fc]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffdeecfa148, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x0000024f847dc150 WorkerThread "GC Thread#0"                     [id=15228, stack(0x000000e57f500000,0x000000e57f600000) (1024K)]
+  0x0000024f86cc37e0 ConcurrentGCThread "G1 Main Marker"            [id=9044, stack(0x000000e57f600000,0x000000e57f700000) (1024K)]
+  0x0000024f847da7f0 WorkerThread "G1 Conc#0"                       [id=5008, stack(0x000000e57f700000,0x000000e57f800000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdee3e8ce7]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffdeed6eb30] Heap_lock - owner thread: 0x0000024f86c5a720
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 0K, committed 0K, reserved 0K
+  class space    used 0K, committed 0K, reserved 0K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+
+Card table byte_map: [0x0000024fab710000,0x0000024fabb10000] _byte_map_base: 0x0000024fab310000
+
+Marking Bits: (CMBitMap*) 0x0000024f86cb1ef0
+ Bits: [0x0000024fabb10000, 0x0000024fadb10000)
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.005 Loaded shared library C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6b58b0000 - 0x00007ff6b5a1f000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\bin\webstorm64.exe
+0x00007ffe7a770000 - 0x00007ffe7a968000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffe78910000 - 0x00007ffe789d2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffe78270000 - 0x00007ffe78566000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffe78850000 - 0x00007ffe78901000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffe795b0000 - 0x00007ffe7964e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffe799b0000 - 0x00007ffe79a4f000 	C:\Windows\System32\sechost.dll
+0x00007ffe78bf0000 - 0x00007ffe78d10000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffe78570000 - 0x00007ffe78597000 	C:\Windows\System32\bcrypt.dll
+0x00007ffe79180000 - 0x00007ffe7924d000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffe77f00000 - 0x00007ffe77f9d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffe77e00000 - 0x00007ffe77f00000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe79650000 - 0x00007ffe799a4000 	C:\Windows\System32\combase.dll
+0x00007ffe79d10000 - 0x00007ffe7a480000 	C:\Windows\System32\SHELL32.dll
+0x00007ffe75b20000 - 0x00007ffe75d21000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x00007ffe79b60000 - 0x00007ffe79d01000 	C:\Windows\System32\USER32.dll
+0x00007ffe77fa0000 - 0x00007ffe77fc2000 	C:\Windows\System32\win32u.dll
+0x00007ffe78820000 - 0x00007ffe7884b000 	C:\Windows\System32\GDI32.dll
+0x00007ffe78620000 - 0x00007ffe78739000 	C:\Windows\System32\gdi32full.dll
+0x00007ffe6bb90000 - 0x00007ffe6bbb7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffe77cf0000 - 0x00007ffe77d1e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffe77780000 - 0x00007ffe7778c000 	C:\Windows\SYSTEM32\CRYPTBASE.DLL
+0x00007ffe7a5f0000 - 0x00007ffe7a61f000 	C:\Windows\System32\IMM32.DLL
+0x00007ffe75d30000 - 0x00007ffe764d5000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffe77830000 - 0x00007ffe7785b000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffe7a4e0000 - 0x00007ffe7a58d000 	C:\Windows\System32\SHCORE.dll
+0x00007ffe7a480000 - 0x00007ffe7a4db000 	C:\Windows\System32\shlwapi.dll
+0x00007ffe77d30000 - 0x00007ffe77d54000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffe77090000 - 0x00007ffe770c3000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x00007ffdee0a0000 - 0x00007ffdeee61000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\server\jvm.dll
+0x00007ffe7a620000 - 0x00007ffe7a68b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffe77390000 - 0x00007ffe773db000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffe62fe0000 - 0x00007ffe62ffb000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\VCRUNTIME140.dll
+0x00007ffe6dba0000 - 0x00007ffe6dbaa000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffe742b0000 - 0x00007ffe742bc000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\VCRUNTIME140_1.dll
+0x00007ffe77200000 - 0x00007ffe77212000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffe70900000 - 0x00007ffe7090a000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\jimage.dll
+0x00007ffe64730000 - 0x00007ffe64764000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffe78130000 - 0x00007ffe781b2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffe6eff0000 - 0x00007ffe6effe000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\instrument.dll
+0x00007ffe62450000 - 0x00007ffe62468000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\jli.dll
+0x00007ffe61b30000 - 0x00007ffe61b50000 	C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\java.dll
+0x00007ffe62490000 - 0x00007ffe62540000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.6280_none_792d7c952443c49a\COMCTL32.dll
+0x00007ffe76610000 - 0x00007ffe76622000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\JetBrains\WebStorm 2024.3.2\bin;C:\Windows\SYSTEM32;C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin\server;C:\Program Files\JetBrains\WebStorm 2024.3.2\jbr\bin;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.6280_none_792d7c952443c49a
+
+VM Arguments:
+jvm_args: abort vfprintf -XX:ErrorFile=C:\Users\raver\java_error_in_webstorm_%p.log -XX:HeapDumpPath=C:\Users\raver\java_error_in_webstorm.hprof -Xms128m -Xmx2048m -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:CICompilerCount=2 -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Djdk.nio.maxCachedBufferSize=2097152 -Djava.util.zip.use.nio.for.zip.file.access=true -Dkotlinx.coroutines.debug=off -XX:+UnlockDiagnosticVMOptions -XX:TieredOldPercentage=100000 -Denable.non.commercial.ai.license=true -Dwsl.use.remote.agent.for.nio.filesystem=true -Djava.nio.file.spi.DefaultFileSystemProvider=com.intellij.platform.core.nio.fs.MultiRoutingFileSystemProvider -Djava.security.manager=com.intellij.platform.core.nio.fs.CoreBootstrapSecurityManager -Xms256m -Xmx2048m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED -javaagent:C:\jetbra\jetbra-agent.jar -Djb.vmOptionsFile=C:\jetbra\vmoptions\webide.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=WebStorm2024.3 -Djna.boot.library.path=C:\Program Files\JetBrains\WebStorm 2024.3.2/lib/jna/amd64 -Dpty4j.preferred.native.folder=C:\Program Files\JetBrains\WebStorm 2024.3.2/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=C:\Program Files\JetBrains\WebStorm 2024.3.2/modules/module-descriptors.jar -Didea.platform.prefix=WebStorm -Dsplash=true -Daether.connector.resumeDownloads=false -Dcompose.swing.render.on.graphics=true --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt.windows=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED -Dide.native.launcher=true -Djcef.sandbox.ptr=0000024F847B2A70 -Djcef.sandbox.cefVersion=122.1.9+gd14e051+chromium-122.0.6261.94 
+java_command: com.intellij.idea.Main --line 6 C:\Users\raver\Desktop\j\j\src\sections\get-pets.tsx
+java_class_path (initial): C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\platform-loader.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\util-8.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\util.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\app-client.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\util_rt.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\product.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\opentelemetry.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\app.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\product-client.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\lib-client.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\stats.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\jps-model.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\external-system-rt.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\rd.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\bouncy-castle.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\protobuf.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\forms_rt.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\lib.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\externalProcess-rt.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\groovy.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\annotations.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\jsch-agent.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\kotlinx-coroutines-slf4j-1.8.0-intellij.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\nio-fs.jar;C:\Program Files\JetBrains\WebStorm 2024.3.2\lib\trove.jar
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {command line}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+    ccstr ErrorFile                                = $USER_HOME/java_error_in_idea_%p.log            {product} {command line}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+     bool HeapDumpOnOutOfMemoryError               = true                                   {manageable} {command line}
+    ccstr HeapDumpPath                             = $USER_HOME/java_error_in_idea.hprof         {manageable} {command line}
+     bool IgnoreUnrecognizedVMOptions              = true                                      {product} {command line}
+   size_t InitialHeapSize                          = 268435456                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 268435456                                 {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5826188                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 265522362                              {pd product} {ergonomic}
+     bool OmitStackTraceInFastThrow                = false                                     {product} {command line}
+    uintx ProfiledCodeHeapSize                     = 265522362                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 536870912                              {pd product} {command line}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     intx SoftRefLRUPolicyMSPerMB                  = 50                                        {product} {command line}
+     intx TieredOldPercentage                      = 100000                                 {diagnostic} {command line}
+     bool UnlockDiagnosticVMOptions                = true                                   {diagnostic} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {command line}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Users\raver\Desktop\j\j\node_modules\.bin;C:\Users\raver\Desktop\j\node_modules\.bin;C:\Users\raver\Desktop\node_modules\.bin;C:\Users\raver\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\OSPanel\bin;C:\Users\raver\AppData\Local\Microsoft\WindowsApps;C:\Users\raver\.dotnet\tools;C:\Users\raver\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\WebStorm 2024.3.2\bin;;C:\Users\raver\AppData\Roaming\npm;F:\cursor\resources\app\bin;C:\Users\raver\Desktop\j\j\node_modules\.bin
+USERNAME=raver
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\Users\raver\AppData\Local\Temp
+TEMP=C:\Users\raver\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+JNI global refs:
+JNI global refs: 0, weak refs: 0
+
+JNI global refs memory usage: 0, weak refs: 0
+
+Process memory usage:
+Resident Set Size: 14224K (0% of 16473668K total physical memory with 4401344K free physical memory)
+
+OOME stack traces (most recent first):
+Classloader memory used:
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5915)
+OS uptime: 0 days 1:58 hours
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x424, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, serialize, rdtscp, rdpid, fsrm, f16c, pku, cet_ibt, cet_ss
+Processor Information for all 12 processors :
+  Max Mhz: 2000, Current Mhz: 2000, Mhz Limit: 2000
+
+Memory: 4k page, system-wide physical 16087M (4298M free)
+TotalPageFile size 22607M (AvailPageFile size 165M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 65M, peak: 321M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.5+8-b631.30) for windows-amd64 JRE (21.0.5+8-b631.30), built on 2024-12-06 by "builduser" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
